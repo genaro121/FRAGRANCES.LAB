@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todos</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button onclick="location.href='index.html'">Volver</button>
+
+<input id="busqueda" placeholder="Buscar">
+
+<select id="filtroCategoria"></select>
+<select id="filtroEstacion">
+  <option value="">Todas las estaciones</option>
+  <option>Verano</option>
+  <option>Otoño</option>
+  <option>Invierno</option>
+  <option>Primavera</option>
+</select>
+
+<div id="lista" class="grid"></div>
+
+<script src="todos.js"></script>
+</body>
+</html>

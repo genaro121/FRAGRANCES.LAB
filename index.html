@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fragrances</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h2>Fragrances</h2>
+
+  <div class="menu" onclick="toggleMenu(event)">
+    ☰
+    <div class="dropdown" id="dropdownMenu">
+      <a href="#">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="todos.html">Ver todos</a>
+
+      <div class="sub">
+        Temporadas ▸
+        <div class="sub-menu">
+          <a href="#" onclick="filtrarEstacion('Verano')">Verano</a>
+          <a href="#" onclick="filtrarEstacion('Otoño')">Otoño</a>
+          <a href="#" onclick="filtrarEstacion('Invierno')">Invierno</a>
+          <a href="#" onclick="filtrarEstacion('Primavera')">Primavera</a>
+        </div>
+      </div>
+
+      <a href="#" onclick="activarAdmin()">Admin</a>
+      <a href="#footer">Contacto</a>
+    </div>
+  </div>
+</header>
+
+<input type="text" id="busqueda" placeholder="Buscar producto...">
+
+<div id="panelAdmin" style="display:none; padding:15px; background:#fff; margin:15px; border-radius:10px;">
+
+  <h3>Panel Admin</h3>
+
+  <input id="nuevaCategoria" placeholder="Nueva categoría">
+  <button onclick="crearCategoria()">Crear</button>
+
+  <select id="eliminarCategoria"></select>
+  <button onclick="eliminarCategoria()">Eliminar</button>
+
+  <hr>
+
+  <input id="nombre" placeholder="Nombre">
+  <input id="precio" placeholder="Precio">
+  <input id="descripcion" placeholder="Descripción">
+
+  <select id="categoriaSelect"></select>
+
+  <select id="estacion">
+    <option>Verano</option>
+    <option>Otoño</option>
+    <option>Invierno</option>
+    <option>Primavera</option>
+  </select>
+
+  <input type="file" id="foto1">
+  <input type="file" id="foto2">
+
+  <button onclick="crearProducto()">Crear producto</button>
+
+  <hr>
+
+  <select id="eliminarProducto"></select>
+  <button onclick="eliminarProducto()">Eliminar</button>
+
+  <hr>
+
+  <button onclick="cerrarAdmin()">Cerrar Admin</button>
+
+</div>
+
+<div id="categorias"></div>
+
+<footer id="footer" class="footer">
+  <p><b>Genaro</b></p>
+  <p>📧 fragrances@gmail.com</p>
+  <p>📱 1127650145</p>
+  <p>📸 @fragrances.lab</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
